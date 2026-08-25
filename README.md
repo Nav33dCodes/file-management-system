@@ -1,36 +1,36 @@
-# FILE MANAGEMENT SYSTEM
+# File Management System
 
-A Windows terminal application, written in C, for common file-management tasks through a structured, color-enabled console interface.
+A Windows command-line application written in C for everyday file-management tasks. It provides a simple, color-enabled menu for working with files and folders directly from the terminal.
 
-> **Academic project:** First Semester — Programming Fundamentals
+> Academic project for **Programming Fundamentals**.
 
-## What it does
+## Features
 
-- Creates, reads, writes, renames, moves, copies, and deletes files.
-- Displays file metadata and directory contents.
-- Searches a selected directory by filename keyword.
-- Generates a plain-text CV.
-- Applies a reversible XOR transformation to files using a user-provided key.
+- **File operations:** create, read, append to, rename, copy, move, and delete files.
+- **File information:** view file size and timestamps.
+- **Directory tools:** list directory contents and search names by keyword.
+- **CV generator:** create a plain-text CV from entered details.
+- **XOR transformation:** apply or reverse an XOR transformation with a key.
 
-## Project layout
+## Screenshots
 
-```text
-src/     Application source code
-docs/    Documentation and project notes
-bin/     Local build output (ignored by Git)
-```
+<!-- Add the original full-resolution images to docs/screenshots/ and uncomment these lines.
+### Main menu
+![Main menu](docs/screenshots/main-menu.png)
 
-For the full layout and repository conventions, see [Project Structure](docs/PROJECT_STRUCTURE.md).
+### File creation
+![File created successfully](docs/screenshots/create-file-success.png)
+-->
 
 ## Requirements
 
 - Windows 10 or later
-- A C compiler with Windows SDK support, such as MinGW-w64 GCC
-- A terminal that supports ANSI escape sequences (Windows Terminal is recommended)
+- A C compiler with Windows support, such as [MinGW-w64 GCC](https://www.mingw-w64.org/)
+- A terminal with ANSI escape-sequence support (Windows Terminal is recommended)
 
 ## Build and run
 
-From the repository root:
+From the project folder, run:
 
 ```powershell
 New-Item -ItemType Directory -Force bin
@@ -38,39 +38,35 @@ gcc -Wall -Wextra -std=c11 src/main.c -o bin/file-management-system.exe
 .\bin\file-management-system.exe
 ```
 
-## Using the application
+## How to use
 
-Run the program, select a menu item, and provide the requested file or directory path. Use `.` as the directory path when you want to work in the current folder.
+1. Run the executable.
+2. Enter the number for the feature you want to use.
+3. Provide the requested file or directory path. Use `.` for the current directory.
 
-Some actions change or remove files. Test with copies of important files before using the application on real work.
+> **Warning:** Some features can overwrite, move, or delete files. Test with copies of important files first.
 
-## Security note
+## Project structure
 
-The XOR feature is a learning exercise, not secure encryption. Do not use it to protect confidential, personal, or production data.
-
-## Development standards
-
-- Keep source code in `src/` and documentation in `docs/`.
-- Prefer bounded input and output functions, such as `fgets` and `snprintf`.
-- Compile with warnings enabled before submitting changes.
-- Do not commit generated executables, object files, logs, or editor settings.
-
-## Contributing
-
-1. Create a branch using the organization’s naming convention.
-2. Make focused changes and update documentation when behavior or usage changes.
-3. Build the application locally with warnings enabled.
-4. Open a pull request with a concise summary, test evidence, and any known limitations.
-
-## GitHub Enterprise setup
-
-When hosting this project on GitHub Enterprise, create the repository in the appropriate organization and use your organization’s repository URL:
-
-```powershell
-git clone https://<github-enterprise-host>/<organization>/file-management-system.git
+```text
+FILE-MANAGEMENT-SYSTEM/
+├── src/
+│   └── main.c                 # Application source code
+├── docs/
+│   └── PROJECT_STRUCTURE.md   # Project notes and conventions
+├── bin/                       # Local build output (not committed)
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
-Protect the default branch, require pull-request review where applicable, and enable the organization’s approved security scanning and code-ownership policies.
+For more detail, see [Project Structure](docs/PROJECT_STRUCTURE.md).
+
+## Limitations
+
+- This project is designed for Windows and uses the Windows API for directory operations.
+- The XOR feature is a learning exercise—not secure encryption. Do not use it to protect confidential data.
+- Automated tests have not yet been added.
 
 ## Academic details
 
@@ -83,4 +79,4 @@ Protect the default branch, require pull-request review where applicable, and en
 
 ## License
 
-See [LICENSE](LICENSE).
+Released under the [MIT License](LICENSE).
