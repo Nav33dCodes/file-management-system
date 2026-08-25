@@ -16,7 +16,7 @@
 
 ## Overview
 
-**File Management System** is a terminal-based application that brings common file and directory operations — creation, editing, copying, moving, searching, inspection, and a lightweight XOR-based file transformation — into a single, numbered, color-coded menu. It was built as a **Programming Fundamentals** course project, with an emphasis on clean C, direct use of the Windows API, and a genuinely usable interface rather than a bare proof-of-concept.
+**File Management System** is a terminal-based application that brings common file and directory operations — creation, editing, copying, moving, searching, inspection, and a lightweight XOR-based file transformation — into a single, numbered, color-coded menu. It started as a **Programming Fundamentals** course project, built with an emphasis on clean C, direct use of the Windows API, and a genuinely usable interface rather than a bare proof-of-concept.
 
 ## Table of Contents
 
@@ -29,6 +29,7 @@
 - [Limitations](#limitations)
 - [Roadmap](#roadmap)
 - [Academic Details](#academic-details)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -123,9 +124,13 @@ For more detail on layout and conventions, see [`docs/PROJECT_STRUCTURE.md`](doc
 | Item | Details |
 | --- | --- |
 | **Course** | Programming Fundamentals |
-| **Student** | Naveed Ahmed (Roll No: 2024-uam-1844) |
+| **Student** | Naveed Ahmed |
 | **Instructor** | Sir Nasir Siddiqui |
 | **Institution** | MNS University of Agriculture, Multan |
+
+## Contributing
+
+This started as a coursework project, but issues and pull requests — bug reports, small fixes, or feature ideas — are welcome.
 
 ## License
 
