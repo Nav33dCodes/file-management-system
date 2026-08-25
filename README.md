@@ -1,26 +1,24 @@
 # File Management System
 
-A Windows command-line application written in C for everyday file-management tasks. It provides a simple, color-enabled menu for working with files and folders directly from the terminal.
+A color-enabled Windows command-line application for common file-management tasks. Built in C as a **Programming Fundamentals** academic project, it provides a clear numbered menu for managing files and folders without leaving the terminal.
 
-> Academic project for **Programming Fundamentals**.
+## What it can do
 
-## Features
-
-- **File operations:** create, read, append to, rename, copy, move, and delete files.
-- **File information:** view file size and timestamps.
-- **Directory tools:** list directory contents and search names by keyword.
-- **CV generator:** create a plain-text CV from entered details.
-- **XOR transformation:** apply or reverse an XOR transformation with a key.
+- Create, write to, and read text files.
+- Copy, move, rename, and delete files from the Advanced File Operations menu.
+- Display a file's size plus created, modified, and accessed timestamps.
+- List folders and files in a directory, including file sizes.
+- Search a directory for files or folders by name (case-insensitive).
+- Generate a plain-text CV from details entered in the application.
+- Transform files using a password-based XOR operation. Applying the same operation again reverses it.
 
 ## Screenshots
 
-<!-- Add the original full-resolution images to docs/screenshots/ and uncomment these lines.
 ### Main menu
 ![Main menu](docs/screenshots/main-menu.png)
 
-### File creation
-![File created successfully](docs/screenshots/create-file-success.png)
--->
+### File creation confirmation
+![Successful file creation](docs/screenshots/create-file-success.png)
 
 ## Requirements
 
@@ -41,10 +39,11 @@ gcc -Wall -Wextra -std=c11 src/main.c -o bin/file-management-system.exe
 ## How to use
 
 1. Run the executable.
-2. Enter the number for the feature you want to use.
-3. Provide the requested file or directory path. Use `.` for the current directory.
+2. Choose an option from the numbered main menu.
+3. Enter the requested file or directory path. Use `.` as the directory path to work in the current folder.
+4. Follow the on-screen prompts; press Enter after an operation to return to the menu.
 
-> **Warning:** Some features can overwrite, move, or delete files. Test with copies of important files first.
+> **Caution:** Creating a file, copying a file, generating a CV, and using XOR with an existing destination path can overwrite its contents. Move and delete are also irreversible in this application. Use copies of important files while testing.
 
 ## Project structure
 
@@ -53,7 +52,8 @@ FILE-MANAGEMENT-SYSTEM/
 ├── src/
 │   └── main.c                 # Application source code
 ├── docs/
-│   └── PROJECT_STRUCTURE.md   # Project notes and conventions
+│   ├── PROJECT_STRUCTURE.md   # Project notes and conventions
+│   └── screenshots/           # README screenshots
 ├── bin/                       # Local build output (not committed)
 ├── .gitignore
 ├── LICENSE
