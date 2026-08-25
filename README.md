@@ -8,7 +8,6 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2B-0078D6?style=flat-square&logo=windows&logoColor=white)](#requirements)
 [![Build](https://img.shields.io/badge/Build-MinGW--w64%20GCC-orange?style=flat-square)](#build-and-run)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Academic%20Project-blueviolet?style=flat-square)](#academic-details)
 
 </div>
 
@@ -18,7 +17,7 @@
 
 **File Management System** is a terminal-based application that brings common file and directory operations — creation, editing, copying, moving, searching, inspection, and a lightweight XOR-based file transformation — into a single, numbered, color-coded menu.
 
-It was built with an emphasis on clean C, direct use of the Windows API, and a genuinely usable interface rather than a bare proof-of-concept.
+Originally started as a Semester 1 project for **CS-303: Programming Fundamentals**, it was built with an emphasis on clean C, direct use of the Windows API, and a genuinely usable interface rather than a bare proof-of-concept.
 
 ## Table of Contents
 
@@ -30,7 +29,6 @@ It was built with an emphasis on clean C, direct use of the Windows API, and a g
 - [Project Structure](#project-structure)
 - [Limitations](#limitations)
 - [Roadmap](#roadmap)
-- [Academic Details](#academic-details)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -120,10 +118,6 @@ For more detail on layout and conventions, see [`docs/PROJECT_STRUCTURE.md`](doc
 - [ ] Add automated tests for core file operations
 - [ ] Cross-platform support (POSIX file APIs)
 - [ ] Configurable/persistent user preferences
-
-## Academic Details
-
-Made for **Semester 1, BS Computer Science** — Course **CS-303: Programming Fundamentals**.
 
 ## Contributing
 
