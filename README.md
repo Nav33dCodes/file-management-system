@@ -1,34 +1,71 @@
-# File Management System
+<div align="center">
 
-A color-enabled Windows command-line application for common file-management tasks. Built in C as a **Programming Fundamentals** academic project, it provides a clear numbered menu for managing files and folders without leaving the terminal.
+# 🗂️ File Management System
 
-## What it can do
+**A color-enabled Windows CLI for everyday file-management tasks — built entirely in C.**
 
-- Create, write to, and read text files.
-- Copy, move, rename, and delete files from the Advanced File Operations menu.
-- Display a file's size plus created, modified, and accessed timestamps.
-- List folders and files in a directory, including file sizes.
-- Search a directory for files or folders by name (case-insensitive).
-- Generate a plain-text CV from details entered in the application.
-- Transform files using a password-based XOR operation. Applying the same operation again reverses it.
+[![Language](https://img.shields.io/badge/Language-C11-00599C?style=flat-square&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C11_(C_standard_revision))
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2B-0078D6?style=flat-square&logo=windows&logoColor=white)](#requirements)
+[![Build](https://img.shields.io/badge/Build-MinGW--w64%20GCC-orange?style=flat-square)](#build-and-run)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Academic%20Project-blueviolet?style=flat-square)](#academic-details)
+
+</div>
+
+---
+
+## Overview
+
+**File Management System** is a terminal-based application that brings common file and directory operations — creation, editing, copying, moving, searching, inspection, and a lightweight XOR-based file transformation — into a single, numbered, color-coded menu. It was built as a **Programming Fundamentals** course project, with an emphasis on clean C, direct use of the Windows API, and a genuinely usable interface rather than a bare proof-of-concept.
+
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Requirements](#requirements)
+- [Build and Run](#build-and-run)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Limitations](#limitations)
+- [Roadmap](#roadmap)
+- [Academic Details](#academic-details)
+- [License](#license)
+
+## Features
+
+| Category | Capabilities |
+| --- | --- |
+| **File Basics** | Create, write to, and read text files |
+| **Advanced File Operations** | Copy, move, rename, and delete files |
+| **File Inspection** | View file size, and created / modified / accessed timestamps |
+| **Directory Tools** | List folders and files in a directory (with file sizes) |
+| **Search** | Case-insensitive search for files or folders by name |
+| **CV Generator** | Produce a plain-text CV from details entered interactively |
+| **XOR Transform** | Password-based XOR transformation on a file; re-applying the same password reverses it |
 
 ## Screenshots
 
-### Main menu
-![Main menu](docs/screenshots/main-menu.png)
+<div align="center">
 
-### File creation confirmation
-![Successful file creation](docs/screenshots/create-file-success.png)
+**Main menu**
+
+<img src="docs/screenshots/main-menu.png" alt="Main menu" width="600">
+
+**File creation confirmation**
+
+<img src="docs/screenshots/create-file-success.png" alt="Successful file creation" width="600">
+
+</div>
 
 ## Requirements
 
 - Windows 10 or later
-- A C compiler with Windows support, such as [MinGW-w64 GCC](https://www.mingw-w64.org/)
-- A terminal with ANSI escape-sequence support (Windows Terminal is recommended)
+- A C compiler with Windows support — [MinGW-w64 GCC](https://www.mingw-w64.org/) is recommended
+- A terminal with ANSI escape-sequence support (Windows Terminal recommended)
 
-## Build and run
+## Build and Run
 
-From the project folder, run:
+From the project root, in PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force bin
@@ -36,16 +73,23 @@ gcc -Wall -Wextra -std=c11 src/main.c -o bin/file-management-system.exe
 .\bin\file-management-system.exe
 ```
 
-## How to use
+| Step | What it does |
+| --- | --- |
+| `New-Item ...` | Creates the local `bin/` output directory if it doesn't already exist |
+| `gcc ...` | Compiles `src/main.c` with all warnings enabled, targeting the C11 standard |
+| `.\bin\...exe` | Launches the application |
+
+## Usage
 
 1. Run the executable.
 2. Choose an option from the numbered main menu.
-3. Enter the requested file or directory path. Use `.` as the directory path to work in the current folder.
-4. Follow the on-screen prompts; press Enter after an operation to return to the menu.
+3. Enter the requested file or directory path — use `.` to work in the current folder.
+4. Follow the on-screen prompts; press **Enter** after an operation to return to the menu.
 
-> **Caution:** Creating a file, copying a file, generating a CV, and using XOR with an existing destination path can overwrite its contents. Move and delete are also irreversible in this application. Use copies of important files while testing.
+> **⚠️ Caution**
+> Creating a file, copying a file, generating a CV, or applying XOR to an existing destination path **will overwrite its contents**. Move and delete operations are also irreversible within the application. Work on copies of important files while testing.
 
-## Project structure
+## Project Structure
 
 ```text
 FILE-MANAGEMENT-SYSTEM/
@@ -60,22 +104,28 @@ FILE-MANAGEMENT-SYSTEM/
 └── README.md
 ```
 
-For more detail, see [Project Structure](docs/PROJECT_STRUCTURE.md).
+For more detail on layout and conventions, see [`docs/PROJECT_STRUCTURE.md`](docs/PROJECT_STRUCTURE.md).
 
 ## Limitations
 
-- This project is designed for Windows and uses the Windows API for directory operations.
-- The XOR feature is a learning exercise—not secure encryption. Do not use it to protect confidential data.
+- Designed for Windows only; directory operations rely on the Windows API.
+- The XOR feature is a learning exercise, **not** secure encryption — never use it to protect confidential data.
 - Automated tests have not yet been added.
 
-## Academic details
+## Roadmap
+
+- [ ] Add automated tests for core file operations
+- [ ] Cross-platform support (POSIX file APIs)
+- [ ] Configurable/persistent user preferences
+
+## Academic Details
 
 | Item | Details |
 | --- | --- |
-| Course | Programming Fundamentals |
-| Student | Naveed Ahmed (Roll No: 2024-uam-1844) |
-| Instructor | Sir Nasir Siddiqui |
-| Institution | MNS University of Agriculture, Multan |
+| **Course** | Programming Fundamentals |
+| **Student** | Naveed Ahmed (Roll No: 2024-uam-1844) |
+| **Instructor** | Sir Nasir Siddiqui |
+| **Institution** | MNS University of Agriculture, Multan |
 
 ## License
 
